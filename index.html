@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{
+        padding: 0;
+        margin: 0;
+    }
+
+       header{
+            height:100px;
+            background-color:black;
+        }
+        main{
+            background-color:rgb(63, 18, 239);
+            height: 85vh;
+        }
+        .progress{
+            background-color:red;
+            height:3px;
+            animation:load 1s 4 ease-in-out  ;
+        }
+        
+        @keyframes load{
+            0%{ width: 0;
+            }
+            50%{ width:80vh;
+            }
+            100%{width:100vh;
+            }
+        }
+      
+    .container{
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+        width: 100vw;
+
+    }
+   img{
+       width:300px;
+       /* animation-name:withAnimate;
+       animation-duration:3s;
+       animation-delay:2s;
+       animation-iteration-count:infinite;
+       animation-direction: alternate-reverse;
+       animation-timing-function:ease-out; */
+
+       animation: withAnimate2 3s ease-in-out 0.5s infinite alternate;
+       transform: rotate(360deg);
+
+   }
+   @keyframes withAnimate{
+       from{
+           /* rotation:direction(360degree); */
+           height:300px;
+           width:200px;
+       }
+       to{ height:100vh;
+           width: 100vw;
+       }
+   }
+   @keyframes withAnimate2{
+      0%{
+           /* rotation:direction(360degree); */
+           height:30px;
+           width:200px;
+       }
+       50%{ height:50vh;
+           width: 50vw;
+       }
+       100%{ 
+           width: 100vw;
+       }
+   }
+    </style>
+</head>
+<body> <div class="progress"></div>
+    <div class="container">
+    <div class="box"> <img src="bf.jpg" alt=""></div> 
+    </div>
+    
+</body>
+</html>
